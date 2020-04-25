@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 import tkinter as tk
 from tkinter import Message, Text
 import cv2
@@ -24,7 +21,7 @@ dialog_text = 'Are you sure?'
 #answer = messagebox.askquestion(dialog_title, dialog_text)
 
 window.geometry('1280x720')
-window.configure(background='black')
+window.configure(background='#142850')
 
 #window.attributes('-fullscreen', True)
 
@@ -55,41 +52,41 @@ window.grid_columnconfigure(0, weight=1)
 # Font is a tuple of (font_family, size_in_points, style_modifier_string)
 
 
-message = tk.Label(window, text="Face-Recognition-Based-Attendance-Management-System",
-                   bg="Green", fg="white", width=50, height=2, font=('times', 30, 'italic bold underline'))
+message = tk.Label(window, text="Facial Recognition Attendance System",
+                   bg="#27496d", fg="#dae1e7", width=50, height=2, font=('times', 30, 'italic bold '))
 
 message.place(x=200, y=20)
 
 lbl = tk.Label(window, text="Enter ID", width=20, height=2,
-               fg="red", bg="yellow", font=('times', 15, ' bold '))
+               fg="#dae1e7", bg="#00909e", font=('times', 15, ' bold '))
 lbl.place(x=400, y=200)
 
-txt = tk.Entry(window, width=20, bg="yellow",
+txt = tk.Entry(window, width=20, bg="#dee3e2",
                fg="red", font=('times', 15, ' bold '))
 txt.place(x=700, y=215)
 
-lbl2 = tk.Label(window, text="Enter Name", width=20, fg="red",
-                bg="yellow", height=2, font=('times', 15, ' bold '))
+lbl2 = tk.Label(window, text="Enter Name", width=20, fg="#dae1e7", bg="#00909e",
+                height=2, font=('times', 15, ' bold '))
 lbl2.place(x=400, y=300)
 
-txt2 = tk.Entry(window, width=20, bg="yellow",
+txt2 = tk.Entry(window, width=20, bg="#dee3e2",
                 fg="red", font=('times', 15, ' bold '))
 txt2.place(x=700, y=315)
 
-lbl3 = tk.Label(window, text="Notification : ", width=20, fg="red",
-                bg="yellow", height=2, font=('times', 15, ' bold underline '))
+lbl3 = tk.Label(window, text="Notification : ", width=20, fg="#dae1e7", bg="#00909e",
+                height=2, font=('times', 15, ' bold underline '))
 lbl3.place(x=400, y=400)
 
-message = tk.Label(window, text="", bg="yellow", fg="red", width=30,
+message = tk.Label(window, text="", fg="red", bg="#dee3e2", width=30,
                    height=2, activebackground="yellow", font=('times', 15, ' bold '))
 message.place(x=700, y=400)
 
-lbl3 = tk.Label(window, text="Attendance : ", width=20, fg="red",
-                bg="yellow", height=2, font=('times', 15, ' bold  underline'))
+lbl3 = tk.Label(window, text="Attendance : ", width=20, fg="#dae1e7", bg="#00909e",
+                height=2, font=('times', 15, ' bold  underline'))
 lbl3.place(x=400, y=650)
 
 
-message2 = tk.Label(window, text="", fg="red", bg="yellow",
+message2 = tk.Label(window, text="", fg="red", bg="#dee3e2",
                     activeforeground="green", width=30, height=2, font=('times', 15, ' bold '))
 message2.place(x=700, y=650)
 
@@ -278,28 +275,28 @@ def TrackImages():
         message2.configure(text=res)
 
 
-clearButton = tk.Button(window, text="Clear", command=clear, fg="red", bg="yellow",
+clearButton = tk.Button(window, text="Clear", command=clear, fg="red", bg="#27496d",
                         width=20, height=2, activebackground="Red", font=('times', 15, ' bold '))
 clearButton.place(x=950, y=200)
-clearButton2 = tk.Button(window, text="Clear", command=clear2, fg="red", bg="yellow",
+clearButton2 = tk.Button(window, text="Clear", command=clear2, fg="red", bg="#27496d",
                          width=20, height=2, activebackground="Red", font=('times', 15, ' bold '))
 clearButton2.place(x=950, y=300)
-takeImg = tk.Button(window, text="Take Images", command=TakeImages, fg="red", bg="yellow",
+takeImg = tk.Button(window, text="Take Images", command=TakeImages, fg="red", bg="#27496d",
                     width=20, height=3, activebackground="Red", font=('times', 15, ' bold '))
 takeImg.place(x=200, y=500)
 trainImg = tk.Button(window, text="Train Images", command=TrainImages, fg="red",
-                     bg="yellow", width=20, height=3, activebackground="Red", font=('times', 15, ' bold '))
+                     bg="#27496d", width=20, height=3, activebackground="Red", font=('times', 15, ' bold '))
 trainImg.place(x=500, y=500)
 trackImg = tk.Button(window, text="Track Images", command=TrackImages, fg="red",
-                     bg="yellow", width=20, height=3, activebackground="Red", font=('times', 15, ' bold '))
+                     bg="#27496d", width=20, height=3, activebackground="Red", font=('times', 15, ' bold '))
 trackImg.place(x=800, y=500)
-quitWindow = tk.Button(window, text="Quit", command=window.destroy, fg="red", bg="yellow",
+quitWindow = tk.Button(window, text="Quit", command=window.destroy, fg="red", bg="#27496d",
                        width=20, height=3, activebackground="Red", font=('times', 15, ' bold '))
 quitWindow.place(x=1100, y=500)
 copyWrite = tk.Text(window, background=window.cget(
     "background"), borderwidth=0, font=('times', 30, 'italic bold underline'))
 copyWrite.tag_configure("superscript", offset=10)
-copyWrite.insert("insert", "Developed by Sarthak Tyagi")
+copyWrite.insert("insert", "Developed by VASS")
 copyWrite.configure(state="disabled", fg="red")
 copyWrite.pack(side="left")
 copyWrite.place(x=800, y=750)

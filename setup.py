@@ -27,7 +27,7 @@ setup(
     options = options,
     version = "0.0.1",
     description = 'Vision ToolBox',
-    executables = executables
+    executables = executables, requires=['cv2']
 )
 
 #write python setup build
